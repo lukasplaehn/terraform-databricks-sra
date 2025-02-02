@@ -1,3 +1,24 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "registry.terraform.io/hashicorp/azurerm"
+      version = "4.16.0" # Developed when at Latest Version == 4.16.0
+    }
+    databricks = {
+      source  = "databricks/databricks"
+      version = ">=1.52.0"
+    }
+  }
+  cloud {
+    organization = "Lukas-Plaehn"
+    workspaces {
+      name = "databricks-sra"
+    }
+    hostname = "app.terraform.io"
+    token = var.terraform_token
+  }
+}
+
 provider "azurerm" {
   features {}
 
