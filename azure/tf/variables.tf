@@ -1,3 +1,9 @@
+variable "terraform_token" {
+  type = string
+  description = "(Required) PAT for pushing to GitHub"
+}
+
+
 # ----- Terraform Provider Variables ------
 variable "tenant_id" {
   type = string
