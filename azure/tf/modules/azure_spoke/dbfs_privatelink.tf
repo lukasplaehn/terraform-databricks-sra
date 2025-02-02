@@ -33,7 +33,7 @@ resource "azurerm_private_endpoint" "dbfs_dfs" {
   }
 
   tags = var.tags
-  depends_on = [ azurerm_databricks_workspace.this ]
+  depends_on = [ azurerm_databricks_workspace.this, local.dbfs_name ] # adding dependency, possibly not the one i need
 }
 
 # Define a virtual network link for the dbfs_dfs private DNS zone

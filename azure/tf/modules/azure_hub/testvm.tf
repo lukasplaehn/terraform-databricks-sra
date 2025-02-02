@@ -58,7 +58,8 @@ resource "azurerm_network_interface_security_group_association" "testvmnsgassoc"
 # Retrieve the public IP address of the host machine using the ifconfig.co API
 data "http" "my_public_ip" { // add your host machine ip into nsg
 
-  url = "https://ifconfig.co/json"
+  # url = "https://ifconfig.co/json"
+  url = "https://api.ipify.org?format=json"
   request_headers = {
     Accept = "application/json"
   }
