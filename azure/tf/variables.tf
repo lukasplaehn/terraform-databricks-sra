@@ -88,3 +88,13 @@ variable "databricks_app_object_id" {
   type        = string
   description = "(Required) The object ID of the AzureDatabricks App Registration"
 }
+
+variable "databricks_client_id" {
+  type        = string
+  description = "(Required) The ID of the Databricks Service Principal for Terraform HCP"
+}
+
+variable "databricks_client_secret" {
+  type        = string
+  description = "(Required) The secret of the Databricks Service Principal for Terraform HCP"
+}
